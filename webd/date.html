@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date</title>
+</head>
+<body>
+    <script>
+        // var d1=new Date();
+        // document.write(d1);
+        // var d2=new Date(2022,5);
+        // document.write(d2);
+        // var d3=new Date(86400000);
+        // document.write(d3);
+        // var d4= new Date("March 2022,28");
+        // var d5=Date.parse("March 2022,28");
+        // document.write(d5);
+        // var d6=new Date(d5);
+        // document.write(d6);
+
+        var d=new Date();
+        document.write(d.getDate()+"/" +d.getMonth()+"/"+d.getFullYear());
+        document.write(d.getTime());
+
+        // days=["Sunday","Monday","Tuesday","Wed","Thurs","Fri","Sat","Sun"];
+        // var d=new Date();
+        // document.write(days[d.getDay()]);
+
+
+
+        // let c=0;
+        // //number of sunday on 01 jan 
+        // for(year=2015;year<=2022;year++){
+        //     var d1=new Date(year,0,1);
+        //     if(d1.getDay()==0)
+        //         c++;
+        // }
+        // document.write(c);
+
+        // let c=0;
+        // for(year=2015;year<=2022;year++){
+        //     if(year%4===0 && year%100!==0 || year%400===0)
+        //         c++;
+        // }
+        // document.write(c);
+
+
+        // var d=new Date("26/June/1999");
+        // var diff=Date.now()-d.getTime();
+        // var age_dt=new Date(diff);
+        // var year=age_dt.getFullYear();
+        // var age=Math.abs(year-1970);
+        // document.write(age);
+
+        var d=new Date();
+        var d1=new Date("26/June/1999");
+        var age=Math.abs(d.getFullYear()-d1.getFullYear());
+        if(d.getDate()>=26 && d.getMonth()==5)
+            console.log(age);
+        else
+            console.log(age-1);
+
+
+
+
+    </script>
+</body>
+</html>

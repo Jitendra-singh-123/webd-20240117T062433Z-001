@@ -1,0 +1,65 @@
+<?php
+$hostname="localhost";
+$username="root";
+$password="";
+$con=mysqli_connect($hostname,$username,$password,"employees");
+if(!$con){
+    die("Connection to this database failed due to ". mysqli_connect_error());
+}
+$name1=$_POST['name'];
+$address1=$_POST['address'];
+$number1=$_POST['number'];
+$email1=$_POST['email'];
+$salary1=$_POST['salary'];
+// $sql = "CREATE TABLE employee_table(Name VARCHAR(20) , Address VARCHAR(50), Number INTEGER, Email VARCHAR(20), Salary INTEGER)";
+$sql = "INSERT INTO employee_table (`Name`, `Address` , `Number`, `Email`, `Salary`) VALUES ('$name1', '$address1', '$number1', '$email1', '$salary1');";
+if($con->query($sql)==true){
+       echo "data is inserted";
+   }
+   else
+        echo "Error: ". $sql . "<br>" . mysqli_error($con);
+mysqli_close($con);
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form action="inserting_employeeData.php" method="post">
+        <tr>
+            <td>
+                Name: <input type="text" name="name" id="">   <br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Address: <input type="text" name="address" id=""> <br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Number: <input type="text" name="number" id=""> <br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Email: <input type="text" name="email" id=""> <br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Salary: <input type="text" name="salary" id=""><br>
+            </td>
+        </tr>
+        <tr>
+<td>
+                <input type="submit" name="submit" id=""><br>
+            </td>
+        </tr>
+    </form>
+</body>
+</html>

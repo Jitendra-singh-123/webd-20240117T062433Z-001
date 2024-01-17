@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function combinations(str) {
+            let permutations = [];
+            for(i=0;i<str.length;i++){
+                for(j=i+1;j<=str.length;j++){
+                    permutations.push(str.slice(i,j));
+                }
+            }
+            return permutations;
+        }
+        console.log(combinations("dog"));
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

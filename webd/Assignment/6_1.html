@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function zigZag() {
+            var str = document.getElementById("n").value;
+            var arr = [];
+            for (i = 0; i < str.length; i++)
+                arr.push(parseInt(str[i]));
+            let n = arr.length;
+            let flag = true;
+            let temp = 0;
+            for (let i = 0; i <= n - 2; i++) {
+
+                if (flag) {
+
+                    if (arr[i] > arr[i + 1]) {
+                        temp = arr[i];
+                        arr[i] = arr[i + 1];
+                        arr[i + 1] = temp;
+                    }
+                }
+
+
+                else {
+
+                    if (arr[i] < arr[i + 1]) {
+                        temp = arr[i];
+                        arr[i] = arr[i + 1];
+                        arr[i + 1] = temp;
+                    }
+                }
+
+
+                flag = !flag;
+            }
+            document.getElementById("res").value = arr;
+        }
+
+
+    </script>
+</head>
+
+<body>
+    Enter Number: <input type="text" name="" id="n"><br>
+    Result: <input type="text" name="" id="res"><br>
+    <input type="button" name="" id="" value="zigzag" onclick="zigZag()" />
+</body>
+
+</html>

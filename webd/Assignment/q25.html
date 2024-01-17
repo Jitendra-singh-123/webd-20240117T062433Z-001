@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function total(){
+            var rate1=document.getElementById("r1").value;
+            var quantity1=document.getElementById("q1").value;
+            var total1= rate1*quantity1;
+            document.getElementById("t1").value=total1;
+            var rate2=document.getElementById("r2").value;
+            var quantity2=document.getElementById("q2").value;
+            var total2=rate2*quantity2;
+            document.getElementById("t2").value=total2;
+            document.getElementById("tax").value=(total1+total2)*0.1;
+            var tax=document.getElementById("tax").value;
+            document.getElementById("grand").value=parseFloat(total1+total2)+parseFloat(tax);
+        }
+    </script>
+</head>
+<body>
+    <table border="1" cellspacing="2">
+        <tr>
+            <td colspan="8">particular&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quantity&nbsp;&nbsp;&nbsp;&nbsp;total</td>
+        </tr>
+        <tr >
+           <td style="width: 90px">Product1</td>
+           <td><input type="text"  id="r1" style="width:40px;" /></td>
+           <td><input type="text" name="" id="q1" style="width: 50px;"></td>
+           <td><input type="text" name="" id="t1" style="width: 40px;" readonly></td>
+        </tr>
+        <tr>
+            <td style="width: 90px;">Product2</td>
+            <td><input type="text"  id="r2" style="width:40px;" /></td>
+            <td><input type="text" name="" id="q2" style="width: 50px;"></td>
+            <td><input type="text" name="" id="t2" style="width: 40px;" readonly></td>
+         </tr>
+         <tr>
+             <td colspan="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tax: <input type="text" readonly name="" id="tax" style="width: 60px;">&nbsp;&nbsp;&nbsp;Based on a 10% rate</td>
+         </tr>
+         <tr>
+             <td colspan="6">Grand Total: <input type="text" name="" id="grand"  style="width: 70px;" readonly>&nbsp;&nbsp;&nbsp;VAT included</td>
+         </tr>
+         <tr ><td >
+             <input type="button" name="" value="Generate Bill"  id="bill" onclick="total()" />
+         </td></tr>
+    </table>
+</body>
+</html>

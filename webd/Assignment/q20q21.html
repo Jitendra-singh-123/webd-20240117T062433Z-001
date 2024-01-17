@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var date=new Date();
+        var week=["sunday","Monday","tuesday","wednesday","thursday","friday","saturday"];
+        var date1=new Date("15/june/1999");
+        console.log("Day on your bday was",week[date1.getDay()]);
+
+        var diff=date.getFullYear()-date1.getFullYear();
+        if(date.getDate()>=15 && date.getMonth()>=6){
+            console.log("Your Age is: ",diff)
+        }
+        else
+            console.log("Your age is: ",diff-1);
+            
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript_sample</title>
+</head>
+<body>
+    first_no: <input type="text" name="first_no" id="fn"value="" placeholder="Enter first integer value"><br>
+    second_no: <input type="text" name="second_no" id="sn" value="" placeholder="Enter second integer value"><br>
+    result: <input type="text" id="rs" value="" ><br>
+    <input type="button" value="ClickMe" onclick="fun()">
+    <script>
+        function fun(){
+            var x,y,z;
+            x=Number(document.getElementById("fn").value)
+            y=Number(document.getElementById("sn").value)
+            z=x+y;
+            console.log(z);
+            document.getElementById("rs").value=z;
+        }
+    </script>
+</body>
+</html>

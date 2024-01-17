@@ -1,0 +1,42 @@
+
+<html>
+<body>
+
+<form method="GET" name="form1" action="findState.php">
+<select style="background-color: #ffffa0"  onchange="getState(this.value)">
+<option value="">Select Country</option>
+<option value="223">USA</option>
+<option value="224">Canada</option>
+<option value="225">England</option>
+<option value="226">Ireland</option>
+</select>
+</form>
+<div id='statediv'></div>
+<script>
+function getState(countryId)
+{    
+  // var strURL="findState.php?country="+countryId;
+  if (countryId == "") {
+    document.getElementById("statediv").innerHTML = "";
+    return;
+  }
+  else{
+  console.log(countryId);
+  var xhttp = new XMLHttpRequest();
+  
+ 
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("statediv").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET","findState.php?country="+countryId,true);
+  xhttp.send();
+}
+   
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.min.js "></script>
+</head>
+
+<body>
+    <p class="odd">this is my body1</p>
+    <p id="second">this is my body2</p>
+    <p class="odd">this is my body3</p>
+    <p>this is my body4</p>
+
+    <div id="wiki">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum eligendi odit delectus blanditiis maxime
+        tempore, tempora deleniti dolor, esse aperiam ipsam quam aspernatur repellat repudiandae alias magni veritatis
+        temporibus saepe?
+    </div><button id="btn">Toggel Now</button>
+    <form type="text">
+        <input type="text"  id="inp">
+        <textarea  id="ta">This is your text area</textarea>
+    </form>
+    
+    <script>
+        //whenever page is large, sometime page is not fully loaded but jquery is applied which arises error therefore we use below function so that jquery is only called once page is fully loaded
+        $(document).ready(function () {
+            // console.log($)
+            // console.log(jQuery)
+            // console.log("We are using Jquery")
+
+            // $('selector').action();
+            //below is element selector
+            //  $('p').click(console.log("executed when page is loaded")); //click on p whenever page is loaded
+            $('p').click(function () {
+                // console.log("You have clicked on p")
+                console.log("You have clicked on p", this);
+                // $('p').hide();
+                // $(this).hide();// this hide current para
+
+            }); // do this when we click on p
+
+            // $('p').dblclick(function () {
+            //     console.log("You have double clicked on p", this);
+
+            // }); 
+            // $('p').mouseenter(function () {
+            //     console.log("You mouseenter on p", this);
+
+            // }); 
+
+
+            //below is Id selector 
+            //    $('#second').click(console.log("excuted"));
+
+            //below is class selector
+            //    $('.odd').click();
+            // or
+            // $('p.odd').click();
+
+
+            //other selector 
+            // $('*').click() //click on all elements
+
+            // $('p:first').click(); // first element of HTML is selected
+
+
+            //events in Jquery
+            // mouse events = click, dblclick,mouseenter,mouseleave
+            // KeyboardEvent = keypress,keydown,MediaKeyStatusMap
+            // form events=submit,change,focus,blur
+            // document/window events = load,resize,scroll,unload
+
+            //demoing the on method
+            $('p').on(
+                {
+                    click: function () {
+                        console.log('Thanks for clicking', this);
+                    },
+                    mouseleave: function () {
+                        console.log('Thanks for mouseleave', this);
+                    }
+                })
+            //content hide is 1 sec;
+            // $('#wiki').hide(1000);
+
+            // $('#wiki').hide(1000,function(){
+            //     console.log("Hidden");
+            // });
+            // $('#wiki').show(1000,function(){
+            //     console.log("shown");
+            // });
+
+            $("#btn").click(function () {
+                //  $("#wiki").toggle(5000);
+                //  $("#wiki").fadeOut(1000);
+                //  $("#wiki").fadeIn(1000);
+                $("#wiki").fadeToggle(1000);
+                //  $("#wiki").fadeTo(1000);
+            })
+
+            // $('#wiki').slideUp(1000,function(){
+            //     console.log("done")
+            // })
+            // $('#wiki').slideDown(1000)
+            // $('#wiki').slideToggle(1000)
+
+            //Animation in Jquery
+            // $('#wiki').animate({
+            //     opacity: 0.3,
+            //     height: '150px',
+            //     width:'350px'
+            // },2000)
+
+            // $("#wiki").text("Text is changed")
+            // show the content of form text area
+            console.log($('#ta').val());
+            //change the content of text area in form
+            console.log($('#ta').val("changing content of text area in form"));
+            
+            console.log($("#inp").val("Changed content of input in form"));
+            
+            // $("#wiki").empty();
+
+            //css in jquery
+            $("#wiki").css('background-color','red');
+            
+        });
+
+
+    </script>
+</body>
+
+</html>

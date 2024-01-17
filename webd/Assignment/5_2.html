@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function change(){
+            var str=document.getElementById("st").value;
+            var str1=str.split(" ");
+            for(i=0;i<str1.length;i++){
+                str1[i]=str1[i].charAt(0).toUpperCase()+(str1[i].slice(1).toLowerCase());
+            }
+            var str3=str1.join(" ");
+            console.log(str3)
+            document.getElementById("res").value=str3;
+        }
+    </script>
+</head>
+<body>
+    Enter string<input type="text" name="" id="st"> <br>
+
+    Result<input type="text" name="" id="res"><br>
+    <input type="button" name="" id="bt" value="Title" onclick="change()" />
+</body>
+</html>

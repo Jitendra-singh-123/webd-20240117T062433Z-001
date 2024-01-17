@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+    <script>
+        var date=new Date();
+        // Methods in Date():
+        // getDay()// return index 0-6 sunday,monday,tuesday,wednesday....
+        var days=["SUN","MON","TUE","WED","THU","FRI","SAT"]
+        console.log("Today is: ",days[date.getDay()])
+        // console.log(date);
+        //getDate() getHours() getMinutes() getSeconds()  getMilliseconds()   getTime() getYear() getFullyear()
+        // var new_date=new Date("07 April 2022"); 
+        var new_date1=new Date(2022,03,07,11,34,40,100);
+        console.log(new_date1);
+        console.log(new_date1.getMilliseconds());
+        console.log(new_date1.getTime());// return milliseconds from 1 jan 1970 till now
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

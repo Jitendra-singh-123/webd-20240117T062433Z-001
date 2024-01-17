@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event in javascript</title>
+    <script>
+        function coordinate(){
+            var cx=event.clientX
+            var cy=event.clientY
+            var px=event.pageX
+            var py=event.pageY
+            var sx=event.screenX
+            var sy=event.screenY
+            // client coordinate
+            // document.getElementById("x").innerHTML =cx
+            // document.getElementById("y").innerHTML =cy
+            // screen coordinate
+            // document.getElementById("x").innerHTML =sx
+            // document.getElementById("y").innerHTML =sy
+            // page coordinate
+            document.getElementById("x").innerHTML =px
+            document.getElementById("y").innerHTML =py
+            
+        }
+    </script>
+
+</head>
+<body onmousemove="coordinate()" style="background-color: aqua;">
+    <!-- on(event) Event handler like onclick -->
+    <!-- wihtout on is event -->
+    <!-- mouse event -->
+    <!-- difference between: -->
+    <!-- 1.click 2. mouseup 3.mousedown  -->
+
+    <!-- 4.mouseout 5. mouseover 6.mousemove 7.contextmenu -->
+
+    <!-- keyboard event -->
+    <!-- difference -->
+    <!-- 1.keyup 2.keydown 3.keypress -->
+
+    <!-- mouse and keyboard event ,form event -->
+    <!--0.onfocus 1.onblur 2.onsubmit 3.onchoose 4.onselect -->
+    
+    <!-- Automatic event -->
+    <!-- 1.onerror 2.onLoad 3.onabort 4.onoline 5.onoffline 6.onupload-->
+
+    X=<p id="x"></p>
+    <br>
+    Y=<p id="y"></p>
+
+
+</body>
+</html>

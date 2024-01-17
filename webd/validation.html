@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validateForm() {
+            let x = document.forms["dataEntry"]["name"].value;
+            var email = document.forms["dataEntry"]["email"].value;
+            var password = document.forms["dataEntry"]["password"].value;
+            var confirm_password = document.forms["dataEntry"]["confirm_password"].value;
+            var number = document.forms["dataEntry"]["number"].value;
+            var regular = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+            if (x == "") {
+                alert("Name must be filled out");
+                x.focus();
+                return false;
+            }
+            // if (x.length > 2 && x.length <= 20) {
+            //     alert("Length of name should between 3 to 20");
+            //     x.focus();
+            //     return false;
+            // }
+            if (email.indexOf("@") < 1 || email.indexOf(".") < email.indexOf("@") + 2 || email.indexOf(".") + 2 >= email.length) {
+                alert("Please enter a valid email address");
+                email.focus();
+                return false;
+            }
+            if (isNaN(number)) {
+                alert("Enter numeric value only");
+                number.focus();
+                return false;
+            }
+            if (number.length != 10) {
+                alert("Length of number should be 10");
+                number.focus();
+                return false;
+            }
+            if (number.value == "") {
+                alert("Enter Number please");
+                number.focus();
+                return false;
+            }
+            if (!regular.test(password)) {
+                alert("Password should contain atleast one number and one specail character");
+                password.focus();
+                return false;
+            }
+
+            if (confirm_password != password) {
+                alert("Password does not match");
+                confirm_password.focus();
+                return false;
+            }
+            return true;
+
+        }
+    </script>
+</head>
+
+<body>
+    <form name="dataEntry" action="action.php" onsubmit="validateForm()" method="POST">
+        <table border=5" bgcolor="orange">
+            <tr>
+                <td><label>
+                        Name
+                    </label>
+                    <input type="text" name="name" placeholder="Enter your name">
+                    <br>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td><label>email</label>
+                    <input type="text" name="email" value=" " />
+                    <br>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>Phone number</label>
+                    <input type="text" name="number" value=" ">
+                    <br>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>Sequence</label>
+                    <input type="number" name="seq" value=" " min="1" max="10" step="2" /><br>
+                </td>
+            </tr> 
+
+            <tr>
+                <td><label>Volume</label>
+                    <input type="range" name="ran" value="" min="1" max="10" /><br>
+                </td>
+            </tr> 
+
+            <tr>
+                <td><label>DOB</label>
+                    <input type="date" name="date" value=" " />
+                    <br>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>Password</label>
+                    <input type="text" name="password" value="" />
+                    <br>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Confirm Password</label>
+                    <input type="text" name="confirm_password" value="" />
+                    <br>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>Feedback</label>
+                    <br>
+                    <textarea rows=5 cols=50 name="description"></textarea>
+                    <br>
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox" name="Male" value="on" checked>Male</input>
+                    <input type="checkbox" name="Female" value="on">Female</input>
+                    <br>
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="radio" name="Subject" value="Male">Male</input>
+                    <input type="radio" name="Subject" value="Female">Female</input>
+                    <br>
+                </td>
+            </tr>
+
+            <tr>
+                <td><select name="drop-downn">
+                        <option value="Male">Male</option>
+                        <option value="Female" selected>Female</option>
+                        <option value="Transgender">Transgender</option>
+                    </select>
+                    <br>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td><label>Enter your favourite subject
+                        <input type="text" name="abc" list="subjects">
+                        <datalist id="subjects">
+                            <option>Maths</option>
+                            <option>Physics</option>
+                            <option>History</option>
+                            <option>Hindi</option>
+                            <option>Humanities</option>
+                            <option>Micro</option>
+                            <option>Master</option>
+                            <option>Plant</option>
+                        </datalist>
+                    </label></td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Select file</label>
+                    <input type="file" name="fileupload" accept="image/* ">
+                </td>
+            </tr>
+            <tr>
+                <td> <input type="submit" value="Register" />
+                    <input type="reset" name="reset" value="Reset" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

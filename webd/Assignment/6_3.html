@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function count() {
+            var str=document.getElementById("n").value;
+            var last = str[0];
+
+            var i = 1, counter = 0;
+
+            while (i < str.length) {
+
+                if (str[i] == '1' && last == '0') {
+
+                    while (str[i] == '1')
+
+                        i++;
+
+
+                    if (str[i] == '0')
+
+                        counter++;
+
+                }
+
+
+                last = str[i];
+
+                i++;
+
+            }
+
+            document.getElementById("res").value= counter;
+
+        }
+    </script>
+</head>
+
+<body>
+    Number: <input type="text" name="" id="n">
+    Result: <input type="text" name="" id="res">
+    <input type="button" value="Count" name="" onclick="count()">
+</body>
+
+</html>

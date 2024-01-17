@@ -1,0 +1,8 @@
+<?php
+$f1=fopen("assignment.txt","w");
+fwrite($f1,"Hello this is webd");
+$fh=fopen("assignment.txt","r");
+while(!feof($fh)){
+    echo fgetc($fh);
+}
+?>

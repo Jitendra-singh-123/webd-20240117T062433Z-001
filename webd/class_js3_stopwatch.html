@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timer</title>
+    <script>
+        // let setInt
+        // function start(){
+        //     setInt=setInterval(hello,100) 
+        // }
+        // function stop(){
+        //     clearInterval(setInt);
+        // }
+        // function hello(){
+        //     // document.write("Hi")
+        //     document.getElementById("p1").innerHTML+="Hi";
+        // }
+
+
+        //stop watch
+        var t1;
+        var ss=0;
+        var mm=0;
+        var hh=0;
+        function start(){
+            t1=setInterval(timer,10);
+        }
+        function stop(){
+            clearInterval(t1);
+        }
+        function timer(){
+            ss=ss+1;
+            document.getElementById("ss").value =ss;
+            if(ss==59)
+            {   
+                ss=0;
+                mm=mm+1;
+                document.getElementById("mm").value = mm;
+            }
+            if(mm==59)
+            {
+                mm=0;
+                hh=hh+1;
+                document.getElementById("hh").value = hh;
+            }
+        }
+        function reset(){
+            clearInterval(t1);
+            document.getElementById("ss").value=0;
+            document.getElementById("mm").value=0;
+            document.getElementById("hh").value=0;
+
+        }
+
+    </script>
+</head>
+<body>
+    <!-- <p id="p1"></p> -->
+    <!-- function call repeatedly after particular time -->
+    <!-- <button onclick="start()">calls setInterval</button>
+    <button onclick="stop()">call clearInterval</button> -->
+    <!-- <p id="hh">HH</p> -->
+    HH<input type="text" value="" id="hh" />
+    <!-- <p id="mm">MM</p> -->
+    <br>
+    MM<input type="text" value="" id="mm" />
+    <!-- <p id="ss">SS</p> -->
+    <br>
+    SS<input type="text" value="" id="ss" />
+    <br>
+    <button onclick="start()">START</button>
+    <button onclick="stop()">STOP</button>
+    <button onclick="reset()">RESET</button>
+
+
+</body>
+</html>

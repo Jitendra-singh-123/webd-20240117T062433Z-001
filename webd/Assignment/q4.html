@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function valid() {
+            let name = document.forms["dataEntry"]["name"].value;
+            let address = document.forms["dataEntry"]["address"].value;
+            let email = document.forms["dataEntry"]["email"].value;
+            let password = document.forms["dataEntry"]["password"].value;
+            let confirm = document.forms["dataEntry"]["confirm"].value;
+            let name_pattern = /^[a-z\s]+$/i;
+            let password_pattern=/^(\d+){8,}$/;
+            if (!name_pattern.test(name)) {
+                alert("Please Enter valid name");
+                name.focus();
+                return false;
+            }
+            if(address=="")
+            {
+                alert("Address Should not be empty");
+                address.focus();
+                return false;
+            }
+            if(email=="" && email.indexOf("@")==0)
+            {
+                alert("Invalid email");
+                email.focus();
+                return false;
+            }
+            if((email.indexOf(".")!=email.length()-3 || email.indexOf(".")!=email.length()-4)){
+                alert("Invalid email");
+                email.focus();
+                return false;
+            }
+            if(!password_pattern.test(password)){
+                alert("Invalid Password");
+                password.focus();
+                return false;
+            }
+            if(password!=confirm){
+                alert("Password does not match")
+                confirm.focus();
+                return false;
+            }
+            return true;
+
+        }
+    </script>
+</head>
+
+<body>
+    <form  name="dataEntry" action="" autocomplete="on" onsubmit="return valid()" method="post">
+        <table border="4">
+            <tr>
+                <td>
+                    <label> Name</label>
+                    <input type="text" name="name" placeholder="Enter your name">
+                    <br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for=""> Address</label>
+                    <input type="text" name="address">
+                    <br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Email Address</label>
+                    <input type="text" name="email">
+                    <br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for=""> Password</label>
+                    <input type="text" name="password">
+                    <br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Confirm Password</label>
+                    <input type="text" name="confirm">
+                    <br>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit" name="submit" value="Submit" /></td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+
+</html>

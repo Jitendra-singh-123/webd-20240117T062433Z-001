@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function domcss(){
+            // var p1=document.getElementById("p1");
+            // var p1=document.getElementsByTagName("p");
+            // for(i=0;i<p1.length;i++){
+            //     console.log(p1.item(i));
+            //     p1.item(i).style.color="red";
+            //     p1.item(i).style.fontSize="30px";
+            // }
+            var p1=document.getElementsByClassName("geu");
+            for(i=0;i<p1.length;i++){
+               // console.log(p1.item(i));
+                p1[i].style.color="red";
+                p1[i].style.fontSize="30px";
+                p1[i].style.backgroundColor="green";
+            }
+           // console.log(p1); array of all paragraphs;
+            // p1.style.color="red";
+            // p1.style.fontSize="30px";
+            // p1.innerHTML="Graphic Era University";
+        }
+
+        function hide(){
+            //space remains in visibilty
+            // document.getElementById("p1").style.visibility="hidden";
+            //no space in display
+            document.getElementById("p1").style.display="none";
+        }
+        function unhide(){
+            // document.getElementById("p1").style.visibility="visible";
+            document.getElementById("p1").style.display="block";
+        }
+
+        function aligns(){
+            document.getElementById("p1").align="center";
+        }
+    </script>
+</head>
+<body>
+    <p id="p1">This is Paragraph1</p>
+    <p id="p2">This is Paragraph2</p>
+    <p id="p3">This is Paragraph3</p>
+    <h1 class="geu" onmouseover="domcss()">This is Heading1</h1>
+    <h1 class="geu">This is Heading2</h1>
+    <button onclick="domcss()">Change Style</button>
+    <button onclick="hide()">Hide</button>
+    <button onclick="unhide()">Unhide</button>
+    <button onclick="aligns()">Align</button>
+</body>
+</html>

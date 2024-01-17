@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check() {
+            var x = parseInt(document.getElementById("n1").value);
+            if (x < 2 || x > 100)
+                document.getElementById("p").innerHTML = "Number Out of range";
+            else {
+                var result = x.toString(2);
+                var count = 0;
+                for (i = 0; i < result.length; i++) {
+                    if (result[i] == '1')
+                        count++;
+                }
+                if (count % 2 == 0)
+                    document.getElementById("p").innerHTML = "Evil Number";
+                else
+                    document.getElementById("p").innerHTML = "Not Evil Number";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    Number<input type="text" name="" id="n1" />
+    <p id="p"></p>
+    <input type="button" name="" value="Check " id="" onclick="check()">
+</body>
+
+</html>

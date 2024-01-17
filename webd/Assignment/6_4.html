@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       function arraypair(array,sum){
+        for (i = 0;i < array.length;i++) {
+            var first = array[i];
+            for (j = i + 1;j < array.length;j++) {
+                var second = array[j];
+
+                if ((first + second) == sum) {
+            document.write(first + '+' + second + ' =' + sum);
+            document.write("<br>");
+           
+                }
+            }
+
+        }
+}
+
+var a = [4, 6, 5, -10, 8, 5, 20];
+document.write("Input: "+a);
+document.write("<br>")
+var target=10;
+document.write("Target :"+target);
+document.write("<br>")
+arraypair(a,target)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

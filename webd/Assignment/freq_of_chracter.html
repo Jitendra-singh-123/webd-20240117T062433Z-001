@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun() {
+
+            var str = document.getElementById("x").value;
+            str.toLowerCase();
+            var arr = {};
+            for (i = 0; i < str.length; i++) {
+                if (arr[str[i]]) {
+                    arr[str[i]]++;
+                }
+                else {
+                    arr[str[i]] = 1;
+                }
+            }
+            var s="";
+            for (i = 0; i < str.length; i++) {
+                if (arr[str[i]] != 0) {
+                    s+=str[i] + "->" + arr[str[i]] + "times" + "  ";
+                    document.getElementById("p").innerHTML=s;
+                    arr[str[i]]=0;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    Enter the word here <input type="text" name="" id="x">
+    <input type="button" name="" id="" value="Occur" onclick="fun()">
+    <p id="p"></p>
+</body>
+
+</html>

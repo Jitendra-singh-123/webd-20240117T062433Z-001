@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    //     function convert(){
+    //         var v1=document.getElementById("username").value
+    //         var v2=v1.toUpperCase();
+    //         document.getElementById("username").value=v2;
+    //     }
+        
+    </script>
+</head>
+<body>
+    <script>
+         var str="Graphic Era deemed to be university";
+        // var str=new String("Graphic Era");
+        // var s1="  Graphic Era deemed to be university";
+        console.log(str.charAt(6));
+        console.log(str.charCodeAt(6));
+        console.log(str.length);
+        console.log(str.indexOf("e"));// return index of first occurence of e
+        console.log(str.indexOf("era"));//-1
+        console.log(str.search(/era/i));//8 in search we can pass regular expression also but not in case of indexOf it return -1
+        console.log(str.match("era"));//null , era
+        console.log(str.lastIndexOf("e"))// index of last occurence of character ,29
+
+        // substr(starting,length)
+        console.log(str.substr(3,6));// phic E
+        console.log(str.substr(5));
+        console.log(str.substr());
+        console.log(str.substr(-10,4));
+        // substring(starting,end)
+        console.log(str.substring(3,6));//phi
+        console.log(str.slice(-10));
+        console.log(str.slice(-10,-8));
+        // var v1=str.trim();
+        // console.log(v1.length);
+        // var s1=v1.split(" ");
+        // console.log(s1); 
+         console.log(str.replace("deemed to be","hill"));
+       console.log(str.repeat(3));// 3 times str will be printed
+        console.log(str.concat(" ,dehradun"+" ,Uttarakhand"))
+
+     </script> 
+        <!-- <input type="text" id="username" onblur="convert()" />
+        <input type="text" id="password" /> 
+        <button> Login </button> -->
+</body>
+</html>

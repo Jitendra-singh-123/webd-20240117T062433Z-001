@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function string_chop(str,n){
+            var arr=[];
+            for(i=0;i<str.length;i+=n){
+                arr.push(str.substr(i,n));
+            }
+            return arr;
+        }
+        console.log(string_chop("welcome"));
+        console.log(string_chop("welcome",2));
+        console.log(string_chop("welcome",3));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

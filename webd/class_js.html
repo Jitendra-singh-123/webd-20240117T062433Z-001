@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //var,let for defining the varaible
+        var x=10
+        var y="GEU";
+        var u,v;
+        var v3=true
+        //variables types
+        //string ,number,Boolean,null,undefined,oject
+        //types of variable names
+        console.log(x);
+        document.write("hello");
+        document.write("<br>")
+        console.log(typeof x)
+        console.log(typeof y)
+        document.write(typeof v3 )
+        var v4=null
+        var v5
+
+        //null and undefined values are same but their type is different(object,undefined)
+
+        console.log(v4+1)// 1
+        console.log(v5+1)//NaN
+        console.log(v4==v5)
+        console.log(v4===v5)
+        var v9=[1,2,3]
+        console.log(typeof v9)
+        console.log(v9[0])
+
+        function test() {
+            var v10 ="Local variable"
+            //global x can be accessible
+            console.log(x)
+        }
+        test();
+        //not accessible
+        console.log(v10);
+
+
+    </script>
+</body>
+</html>

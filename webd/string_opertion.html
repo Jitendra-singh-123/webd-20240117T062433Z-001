@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var str=prompt("Enter your email");
+        // console.log(str);
+        // var str1=str.split("@");
+        // var x=str1[0].replace(str1[0].substring(str1[0].length - 7),"*******");
+        // var str3=x+'@'+str1[1];
+        // console.log(str3);
+
+        
+        // var name=prompt("Enter Your Name: ");
+        // var name1=name.split(" ");
+        // var x=name1[0].charAt(0);
+        // var y=name1[1].charAt(0);
+        //  if(x>='a' && x<='z')  
+        //      var x1=x.toUpperCase(); 
+        //  if(x>='A' && x<='Z')
+        //     var x1=x.toLowerCase();
+        //  if(y>='a' && y<='z')
+        //    var y1= y.toUpperCase();
+        // if(y>='A' && y<='Z')
+        //     var y1=y.toLowerCase();
+        
+        // console.log(x1+y1);
+        // document.write(x1+y1);
+        
+
+        var str="hello world";
+        var str1=new String("hello world");
+        var str2=new String("hello world");
+        if(str==str1)
+            console.log("yes");
+        if(str===str1)
+            console.log("no");
+        if(str1===str2)
+            console.log("no");
+        var str3="hello world hello";
+        document.write(str3.indexOf("hello"));
+        console.log(str3.indexOf("hello",-16));
+        console.log(str.search("wo"));
+        console.log(str3.replace(/hello/igm,"hi"));
+        console.log(str3.slice(-4,-1));
+        console.log(str3.substr(0,4));
+        console.log(str3.substring(0,4));
+        console.log(str3.charCodeAt(0));
+        var str4="geu";
+        console.log(str4.search(/[a-z]{3}/igm));
+        var str=prompt("Enter your name","please");
+        confirm("would you like to enter?");
+        alert("dangerous");
+
+    </script>
+</body>
+</html>

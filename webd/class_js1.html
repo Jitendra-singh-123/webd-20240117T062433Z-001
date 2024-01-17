@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">This is Demo text</p>
+    Number1<input type="text" id="x1" placeholder="x1"><br>
+    Number2<input type="text" id="y1" placeholder="y1"><br>
+    Result<input type="text" id="result" placeholder="result">
+    <button value="ADD" onclick="add()">ADD</button>
+    <input type="button" value="add" onclick="add()">
+    <p id="p2">result</p>
+
+    <script>
+        //BOM
+    //     window.alert("Hello");
+    //     if(confirm("Do you want to confrim?")){
+    //         console.log("True")
+    //     }
+    //     else
+    //         console.log("False");
+
+    //   let age =  prompt("Enter your age?");
+    //   if(age>=18)
+    //     {    document.write("You are 18+");}
+    //     else
+    //        { document.write("Not 18+");}
+
+
+        // var v1=prompt("value of v1 is: ");
+        // var v2=prompt("value of v2 is");
+        // var v3=Number(v1)+Number(v2);
+        // document.write(v3);
+
+        // console.log("1"+1)// output is 11
+        // console.log(1+"1");// output is 11
+        // console.log(1+1+"1");// 21
+        // console.log(1+1+"1"+1+1)// 2111
+
+     window.document.getElementById('p1').innerHTML="Content has been changed"
+
+    function add(){
+        var x1=document.getElementById("x1").value;
+        var y1=document.getElementById("y1").value;
+        var result=Number(x1)+Number(y1);
+        document.getElementById("result").value=result;
+        document.getElementById("p2").innerHTML=result;
+
+        // alert(result);
+    }
+
+    </script>
+    <input type="button"  value="close" onclick="window.close()"></input>
+    <input type="button"  value="open" onclick="window.open('https://geu.ac.in')"></input>
+    <button type="button" value="open" onclick="window.open('https://www.youtube.com/')">google</button>
+
+    
+    
+
+    <p>GEU</p>
+</body>
+</html>

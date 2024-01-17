@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <p id="p1">Graphic Era University</p>
+    <p id="p2">Graphic Era hill University</p><br>
+    <input type="text" id="t1">
+    <button id="btn">OK/hide</button>
+    <button id="btn1">Show</button>
+    <table border="1">
+        <tr>
+            <td>1234567890</td>
+            <td class="c1">aaaaaaaaaa</td>
+        </tr>
+        <tr>
+            <td>1234567890</td>
+            <td class="c1">aaaaaaaaaa</td>
+        </tr>
+        <tr>
+            <td>1234567890</td>
+            <td class="c1">aaaaaaaaaa</td>
+        </tr>
+    </table>
+    <script>
+        // $();
+        // $(document).ready(function(){
+        //     // $("selector").action()
+        //     $("p").text("Hello");
+        //     $("#p2").text("Hello");
+        //     $("p").css("color","red");
+        //     $("#p1").css("color","red");
+        // });
+
+        $(document).ready(function () {
+            $("button").click(function () {
+                var x = $("#t1").val();
+                // alert(x);
+                $("p").css("color", "red");
+                $("#p1").css("font-size", "30px");
+                $("#p2").hide();
+            })
+
+            $(function(){
+                $("#btn1").click(function(){
+                    // $("#p2").show();
+                    $("#p2").toggle();
+                })
+            })
+
+            $(function(){
+                
+                $("p").mouseover(function(){
+                    $(this).css("color","green");
+                })
+                $("p").mouseout(function(){
+                    $(this).css("color","black");
+                })
+            })
+
+        });
+
+        $(function(){
+            $("tr").mouseover(function(){
+                $(this).css("background-color","pink");
+            })
+            $("tr").mouseout(function(){
+                $(this).css("background-color","white");
+            })
+            $(".c1").mouseover(function(){
+                $(this).css("color","green");
+            })
+
+        })
+
+    </script>
+
+</body>
+
+</html>
